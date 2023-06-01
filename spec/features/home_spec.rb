@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature "Welcome page", type: :feature do
+feature "Home page", type: :feature do
   scenario 'Show home with welcome message' do
     visit('/')
     expect(page).to have_content('Welcome to Crisalix')
