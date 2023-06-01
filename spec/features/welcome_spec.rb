@@ -7,7 +7,8 @@ feature "Welcome page", type: :feature do
   end
   scenario 'have a login button' do
     visit('/')
-    expect(page).to have_selector('button')
-    expect(page).to have_link('Login')
+    # expect(page).to have_selector('button')
+    # expect(page).to have_link('Login')
+    expect(find('button')).to have_link('Login')
   end
 end
