@@ -1,11 +1,12 @@
 class ConsultationsController < ApplicationController
   def index
-    @user = current_user
+    # @user = current_user
     @users = User.all
     @doctors = []
     @patients = []
-    @users.each do |user|
-      if user.is_doctor == true
+    # @view = []
+    current_user.each do |user|
+      if doctor?(user)
         @doctors << user
       else
         @patients << user
