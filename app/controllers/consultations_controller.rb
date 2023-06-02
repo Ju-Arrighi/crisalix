@@ -5,7 +5,7 @@ class ConsultationsController < ApplicationController
     @doctors = []
     @patients = []
     # @view = []
-    current_user.each do |user|
+    @users.each do |user|
       if doctor?(user)
         @doctors << user
       else
