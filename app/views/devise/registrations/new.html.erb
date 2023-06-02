@@ -17,6 +17,36 @@
   </div>
 
   <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: true, autocomplete: "John" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, autofocus: true, autocomplete: "Smith" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age %><br />
+    <%= f.number_field :age, autofocus: true, autocomplete: "39" %>
+  </div>
+
+  <div class="field">
+    <%# <%= f.label :is_doctor %><br /> %>
+    <%= label_tag :is_doctor, "Are you a doctor?" %>
+    <%# <%= check_box_tag :is_doctor, "yes" %> %>
+    <%= f.check_box :is_doctor %>
+    <%= hidden_field_tag :is_doctor, "no" %>
+    <%# <%= f.label :is_doctor %> %>
+  </div>
+
+  <div class="field">
+    <%= f.label :specialty %><br />
+    <%= f.text_field :specialty, autofocus: true, autocomplete: "Face Surgery" %>
+  </div>
+
+
+  <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
